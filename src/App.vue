@@ -5,14 +5,36 @@
     </header>
 
     <ul>
+    <active-user
+      v-for="user in users"
+      :key="user.username"
+      :username="user.username"
+      :age="user.age">
+    </active-user>
+    <user-data></user-data>
     </ul>
   </section>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      users: [
+        {
+          username: 'buzica',
+          age: '31'
+        },
+
+        {
+          username: 'gjmm',
+          age: '32'
+        },
+      ]
+    };
+  },
   
-}
+};
 </script>
 
 <style>
