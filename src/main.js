@@ -11,6 +11,13 @@ app.component('user-data', UserData);
 
 app.mount('#app');
 
+
+// Task 2: Output both components side-by-side in your main App template
+
+// Task 3: Add user data and ensure it contains a name and age
+// User data should be output in ActiveUser
+// It should be updated via the UserData component
+
 // Task 1: 
 // Add two components to the app: 
 // An ActiveUser component and an UserData component
