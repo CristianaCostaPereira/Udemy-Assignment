@@ -11,7 +11,7 @@
       >
       </active-user>
 
-      <user-data @add-info="addInfo"></user-data>
+      <user-data @set-data="updateData"></user-data>
     </div>
   </section>
 </template>
@@ -28,10 +28,10 @@ export default {
   },
 
   methods: {
-    addInfo(username, age) {
+    updateData(name, age) {
       this.user = {
-        name: username,
-        age: age,
+        name: name,
+        age: +age, // The '+' will convert the string into a number
       };
     },
   },

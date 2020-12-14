@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  emits: ['add-info'],
+  emits: ['set-data'],
 
   data() {
     return {
@@ -32,7 +32,7 @@ export default {
   methods: {
     submitData () {
       this.$emit(
-        'add-info',
+        'set-data',
         this.enteredName,
         this.enteredAge
       );
