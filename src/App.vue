@@ -11,7 +11,8 @@
       :username="user.username"
       :age="user.age">
     </active-user>
-    <user-data></user-data>
+
+    <user-data @add-info="addInfo"></user-data>
     </ul>
   </section>
 </template>
@@ -33,6 +34,17 @@ export default {
       ]
     };
   },
+
+  methods: {
+    addInfo(username, age) {
+      const newInfo = {
+        username: username,
+        age: age
+      };
+
+      this.users.push(newInfo);
+    }
+  }
   
 };
 </script>

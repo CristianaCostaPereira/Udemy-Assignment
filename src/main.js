@@ -11,8 +11,6 @@ app.component('user-data', UserData);
 
 app.mount('#app');
 
-// Task 1: 
-// UserData should output two input fields => for name and age
 
 // Task 2: Output both components side-by-side in your main App template
 
