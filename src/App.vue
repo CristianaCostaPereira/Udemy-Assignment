@@ -4,16 +4,15 @@
       <h1>Information</h1>
     </header>
 
-    <ul>
-    <active-user
-      v-for="user in users"
-      :key="user.username"
-      :userName="user.username"
-      :age="user.age">
-    </active-user>
+    <div>
+      <active-user
+        :username="user.name"
+        :userage="user.age"
+      >
+      </active-user>
 
-    <user-data @add-info="addInfo"></user-data>
-    </ul>
+      <user-data @add-info="addInfo"></user-data>
+    </div>
   </section>
 </template>
 
@@ -21,44 +20,33 @@
 export default {
   data() {
     return {
-      users: [
-        {
-          username: 'buzica',
-          age: '31'
+      user: {
+          name: 'Cris',
+          age: 31,
         },
-
-        {
-          username: 'gjmm',
-          age: '32'
-        },
-      ]
     };
   },
 
   methods: {
     addInfo(username, age) {
-      const newInfo = {
-        username: username,
-        age: age
+      this.user = {
+        name: username,
+        age: age,
       };
-
-      this.users.push(newInfo);
-    }
-  }
-  
+    },
+  },
 };
 </script>
 
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 body {
@@ -77,13 +65,14 @@ header {
   max-width: 40rem;
 }
 
-#app ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+section {
+  margin: 2rem auto;
+  max-width: 40rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  padding: 1rem;
 }
 
-#app li,
 #app form {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   margin: 1rem auto;
@@ -104,8 +93,8 @@ header {
 #app button {
   font: inherit;
   cursor: pointer;
-  border: 1px solid #ff0077;
-  background-color: #ff0077;
+  border: 1px solid #58004d;
+  background-color: #58004d;
   color: white;
   padding: 0.05rem 1rem;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);

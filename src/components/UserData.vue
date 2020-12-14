@@ -1,5 +1,6 @@
 <template>
-  <form @submit.prevent="submitData">
+  <section>
+    <form @submit.prevent="submitData">
     <div>
       <label>Name</label>
       <input type="text" placeholder="Your name" v-model="enteredName" />
@@ -11,9 +12,10 @@
     </div>
 
     <div>
-      <button>Add Info</button>
+      <button>Set data</button>
     </div>
-  </form>
+    </form>
+  </section>
 </template>
 
 <script>
