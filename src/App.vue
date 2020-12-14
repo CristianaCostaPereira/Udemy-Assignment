@@ -8,7 +8,7 @@
     <active-user
       v-for="user in users"
       :key="user.username"
-      :username="user.username"
+      :userName="user.username"
       :age="user.age">
     </active-user>
 
